@@ -8078,7 +8078,7 @@ game.import('character',function(lib,game,ui,get,ai,_status){
 								}
 							}
 						}
-						if(list.length>2) break;
+						if(list.length>7) break;
 					}
 					if(skills.length) player.chooseControl(skills).set('dialog',['评鉴：请选择尝试发动的技能',[list,'character']]);
 					else event.finish();
@@ -8161,7 +8161,7 @@ game.import('character',function(lib,game,ui,get,ai,_status){
 								}
 							}
 						}
-						if(list.length>2) break;
+						if(list.length>7) break;
 					}
 					if(skills.length) player.chooseControl(skills).set('dialog',['评鉴：请选择尝试发动的技能',[list,'character']]);
 					else event.finish();
