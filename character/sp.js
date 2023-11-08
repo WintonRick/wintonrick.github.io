@@ -16068,7 +16068,7 @@ game.import('character',function(lib,game,ui,get,ai,_status){
 					list.remove('zhaoyun');
 					list.remove('re_zhaoyun');
 					list.remove('ol_zhaoyun');
-					list=list.randomGets(Math.max(4,game.countPlayer()));
+					list=list.randomGets(Math.max(18,game.countPlayer()));
 					var skills=[];
 					for(var i of list){
 						skills.addArray((lib.character[i][3]||[]).filter(function(skill){
@@ -16094,7 +16094,7 @@ game.import('character',function(lib,game,ui,get,ai,_status){
 						if(!event._result) event._result={};
 						event._result.skills=[];
 						var rSkill=event._result.skills;
-						var dialog=ui.create.dialog('请选择获得至多两个技能',[list,'character'],'hidden');
+						var dialog=ui.create.dialog('请选择获得至多四个技能',[list,'character'],'hidden');
 						event.dialog=dialog;
 						var table=document.createElement('div');
 						table.classList.add('add-setting');
@@ -16115,7 +16115,7 @@ game.import('character',function(lib,game,ui,get,ai,_status){
 								},500);
 								var link=this.link;
 								if(!this.classList.contains('bluebg')){
-									if(rSkill.length>=2) return;
+									if(rSkill.length>=4) return;
 									rSkill.add(link);
 									this.classList.add('bluebg');
 								}
